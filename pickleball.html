@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Park Party Pickleball Registration</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="event-nav">
+      <a href="pickleball.html" class="nav-btn active">🏓 Pickleball</a>
+      <a href="bags.html" class="nav-btn">🎯 Bags Tournament</a>
+    </div>
+
+    <div class="header">
+      <div class="tag">🏓 Ewing, MO — Park Party Event</div>
+      <h1>Pickleball<span>Tournament</span></h1>
+      <p class="subtitle">Saturday, August 8th • Tournament Starts at 8:00 AM</p>
+    </div>
+
+    <div class="schedule-banner">
+      <p><strong>Date:</strong> Saturday, August 8th</p>
+      <p><strong>Start Time:</strong> 8:00 AM</p>
+      <p><strong>Location:</strong> Ewing Park</p>
+    </div>
+
+    <div class="prize-banner">
+      <div class="prize-item">
+        <div class="prize-label">Entry Fee</div>
+        <div class="prize-value">$30</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="prize-item">
+        <div class="prize-label">1st Place</div>
+        <div class="prize-value">TBD</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="prize-item">
+        <div class="prize-label">2nd Place</div>
+        <div class="prize-value">TBD</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="prize-item">
+        <div class="prize-label">3rd Place</div>
+        <div class="prize-value">TBD</div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="regForm" novalidate>
+        <input type="hidden" id="eventType" value="Pickleball Tournament">
+
+        <div class="section-title">Team Info</div>
+
+        <div class="field">
+          <label for="teamName">Team Name *</label>
+          <input type="text" id="teamName" placeholder="The Dink Kings" required>
+          <span class="err" id="teamNameErr">Please enter a team name.</span>
+        </div>
+
+        <div class="section-title">Player 1</div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="p1first">First Name *</label>
+            <input type="text" id="p1first" placeholder="Jane" required>
+            <span class="err" id="p1firstErr">Required.</span>
+          </div>
+
+          <div class="field">
+            <label for="p1last">Last Name *</label>
+            <input type="text" id="p1last" placeholder="Smith" required>
+            <span class="err" id="p1lastErr">Required.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="p1email">Email *</label>
+            <input type="email" id="p1email" placeholder="jane@email.com" required>
+            <span class="err" id="p1emailErr">Enter a valid email.</span>
+          </div>
+
+          <div class="field">
+            <label for="p1phone">Phone *</label>
+            <input type="tel" id="p1phone" placeholder="(555) 000-0000" required>
+            <span class="err" id="p1phoneErr">Enter a valid phone number.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="p1age">Age *</label>
+          <input type="number" id="p1age" placeholder="28" min="5" max="110" required>
+          <span class="err" id="p1ageErr">Enter a valid age.</span>
+        </div>
+
+        <div class="section-title">Player 2</div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="p2first">First Name *</label>
+            <input type="text" id="p2first" placeholder="John" required>
+            <span class="err" id="p2firstErr">Required.</span>
+          </div>
+
+          <div class="field">
+            <label for="p2last">Last Name *</label>
+            <input type="text" id="p2last" placeholder="Doe" required>
+            <span class="err" id="p2lastErr">Required.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="p2email">Email</label>
+            <input type="email" id="p2email" placeholder="john@email.com">
+          </div>
+
+          <div class="field">
+            <label for="p2phone">Phone</label>
+            <input type="tel" id="p2phone" placeholder="(555) 000-0000">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="p2age">Age *</label>
+          <input type="number" id="p2age" placeholder="30" min="5" max="110" required>
+          <span class="err" id="p2ageErr">Enter a valid age.</span>
+        </div>
+
+        <div class="section-title">Additional Info</div>
+
+        <div class="field">
+          <label for="heardFrom">How did you hear about us?</label>
+          <select id="heardFrom">
+            <option value="" disabled selected>Select...</option>
+            <option>Social Media</option>
+            <option>Friend / Family</option>
+            <option>Town Newsletter</option>
+            <option>Flyer / Poster</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="section-title">Liability Waiver</div>
+
+        <div class="waiver-box">
+          By registering, participants acknowledge that pickleball is a physical activity that carries inherent risks of injury.
+          Participants agree to hold harmless the town, event organizers, volunteers, and staff from any claims, damages, or injuries
+          arising from participation in the Park Party Pickleball Tournament. Entry fees are non-refundable.
+        </div>
+
+        <div class="field">
+          <label class="waiver-check">
+            <input type="checkbox" id="waiver" required>
+            <span>I have read and agree to the liability waiver on behalf of both players on my team. *</span>
+          </label>
+          <span class="err" id="waiverErr">You must accept the waiver to register.</span>
+        </div>
+
+        <div class="submit-area">
+          <p class="fee-note">
+            Entry fee of <strong>$30 per team</strong> is due at check-in on Saturday, August 8th.
+            1st, 2nd, and 3rd place prizes will be announced.
+          </p>
+
+          <button type="submit" class="submit-btn">Register My Team →</button>
+        </div>
+      </form>
+
+      <div class="success" id="successMsg">
+        <div class="check">🏓</div>
+        <h2>You're In!</h2>
+        <p>
+          Your team has been registered for the Pickleball Tournament.<br>
+          Tournament starts Saturday, August 8th at 8:00 AM.
+        </p>
+        <div class="reg-id" id="regIdDisplay"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
